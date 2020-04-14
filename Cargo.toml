@@ -1,0 +1,20 @@
+[package]
+name = "meuse-cli"
+version = "0.1.0"
+authors = ["mcorbin"]
+edition = "2018"
+
+[dependencies]
+chrono = "0.4"
+clap = { git = "ssh://git@github.com:22/clap-rs/clap.git" }
+reqwest = { version = "0.10", features = ["blocking", "json"] }
+serde = { version = "1.0.106", features = ["derive"]}
+serde_json = "1.0"
+
+[lib]
+name = "meuse"
+path = "src/lib.rs"
+
+[[bin]]
+name = "meuse"
+path = "src/main.rs"
